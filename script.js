@@ -56,3 +56,30 @@ function showAutomata(elementName) {
 
     document.getElementById("automata-info").style.display = "block";
 }
+function showCombSircuit(elementName) {
+    let combTitle = document.getElementById("comb-circuit-title");
+    let combDesc = document.getElementById("comb-circuit-desc");
+
+    switch(elementName) {
+        case 'Multiplexer':
+            combTitle.textContent = "Мультиплексор";
+            combDesc.textContent = "Мультиплексор - це логічний елемент, який вибирає один з декількох входів і передає його на вихід.";
+            break;
+        case 'Demultiplexer':
+            combTitle.textContent = "Демультиплексор";
+            combDesc.textContent = "Демультиплексор - це логічний елемент, який розподіляє вхідний сигнал на один з декількох виходів.";
+            break;
+        case 'Sumator':
+            combTitle.textContent = "Суматор";
+            combDesc.textContent = "Суматор - це логічний елемент, який виконує операцію додавання двох бітів.";
+            break;
+            case 'Comparator':
+            combTitle.textContent = "Компаратор";
+            combDesc.textContent = "Компаратор - це логічний елемент, який порівнює два біти.";
+            break;
+        default:
+            combTitle.textContent = "Помилка";
+            combDesc.textContent = "Вибрано невідомий елемент.";
+    }
+    document.getElementById("circuit-info").style.display = "block";
+}

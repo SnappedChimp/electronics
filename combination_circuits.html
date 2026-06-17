@@ -9,9 +9,18 @@
 <body>
     <h1>Комбінаційні схеми</h1>
     <p>Комбінаційні схеми - це такі схеми, вихід яких залежить тільки від поточних значень вхідних сигналів. Вони не мають пам'яті і не зберігають станів.</p>
-    <button class="main_buttons">Суматори і компаратори</button>
-    <button class="main_buttons">Лічильники</button>
-    <button class="main_buttons">Шифратори і дешифратори</button>
+    <button class="main_buttons" onclick="showCombSircuit('Sumator')">Суматор</button>
+    <!-- <button class="main_buttons">Лічильники</button> -->
+    <button class="main_buttons" onclick="showCombSircuit('Comparator')">Компаратор</button>
+    <button class="main_buttons" onclick="showCombSircuit('Multiplexer')">Мультиплексор</button>
+    <button class="main_buttons" onclick="showCombSircuit('Demultiplexer')">Демультиплексор</button>
     
+
+<div id="circuit-info" style="display: none;">
+    <h2 id="comb-circuit-title">Тут буде назва елемента</h2>
+    <p id="comb-circuit-desc">Тут буде опис.</p>
+    </div>
+    
+<script src="script.js"></script>
 </body>
 </html>
