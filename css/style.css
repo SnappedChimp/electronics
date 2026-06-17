@@ -1,0 +1,17 @@
+body {
+    font-family: 'Georgia', serif;
+    color: white;
+    background-color: #000000;
+
+    button, .main_buttons {
+        text-decoration: none;
+        display: inline-block;
+        background-color: black;
+        color: white;
+        padding: 30px;
+        border-radius: 17px;
+        font-family:'Georgia', serif;
+        font-size: 20px;
+        
+    }
+}

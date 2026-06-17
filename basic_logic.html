@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Логічні елементи</h1>
+    <button class="main_buttons" onclick="showElement('NOT')">НЕ</button>
+    <button class="main_buttons" onclick="showElement('AND')">І</button>
+    <button class="main_buttons" onclick="showElement('OR')">АБО</button>
+    <button class="main_buttons" onclick="showElement('NAND')">І-НЕ</button>
+    <button class="main_buttons" onclick="showElement('NOR')">АБО-НЕ </button>
+
+    <div id="workspace" style="display: none;">
+    <h2 id="element-title">Тут буде назва елемента</h2>
+    <p id="element-desc">Тут буде опис.</p>
+    </div>
+
+    <!-- <button class="main_buttons" onclick="showElement('NOT')">НЕ</button>
+    <button class="main_buttons" onclick="showElement('AND')">І</button> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
