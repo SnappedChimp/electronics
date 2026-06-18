@@ -83,3 +83,20 @@ function showCombSircuit(elementName) {
     }
     document.getElementById("circuit-info").style.display = "block";
 }
+
+//функція для зміни фону сторінки
+function getRandomColor() {
+    let randomNum = Math.floor(Math.random() * 16777215);
+    let HexString = randomNum.toString(16);
+    return "#" + HexString.padStart(6, '0');
+}
+
+function changeBackgroundColor() {
+    let color1 = getRandomColor();
+    let color2 = getRandomColor();
+    let color3 = getRandomColor();
+let newBackground = `radial-gradient(circle at 100% 100%, ${color1}26 20%, ${color2}0D 40%, ${color3}26 80%, #000000 100%)`;
+    document.body.style.backgroundImage = newBackground;
+}
+
+changeBackgroundColor();
