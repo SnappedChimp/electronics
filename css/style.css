@@ -2,7 +2,7 @@ body {
     font-family: 'American Typewriter', monospace;
     color: white;
     /* background-color: #000000; */
-    /* background: radial-gradient(circle at 90% 20%, #011325 30%, #071c33 40%, #000000 80%); */
+    background: radial-gradient(circle at 90% 20%, #011325 30%, #071c33 40%, #000000 80%); */
     background: #000000; /* fallback for old browsers */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -22,6 +22,12 @@ body {
         font-family: 'Helvetica', sans-serif;
         font-size: 20px;
         margin: 10px;
+        transition: all 0.3s ease;
         
+    }
+    .main_buttons:hover {
+        background-color: rgba(71, 70, 70, 0.8);
+        transform: scale(1.05);
+        cursor: pointer;
     }
 }

@@ -1,27 +1,33 @@
 function showElement(elementName) {
     let textblock = document.getElementById("element-title");
     let descblock = document.getElementById("element-desc");
+    let imageblock = document.getElementById("element-image");
 
     switch(elementName) {
         case 'NOT':
             textblock.textContent = "НЕ";
             descblock.textContent = "Логічний елемент, який інвертує вхідний сигнал.";
+            imageblock.src = "images/not_ANSI.svg";
             break;
         case 'AND':
             textblock.textContent = "І";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли всі входи 1.";
+            imageblock.src = "images/and_ANSI.svg";
             break;
         case 'OR':
             textblock.textContent = "АБО";
             descblock.textContent = "Логічний елемент, який дає вихід 1, якщо хоча б один з входів 1.";
+            imageblock.src = "images/or_ANSI.svg";
             break;
         case 'NAND':
             textblock.textContent = "І-НЕ";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли не всі входи 1.";
+            imageblock.src = "images/nand_ANSI.svg";
             break;
         case 'NOR':
             textblock.textContent = "АБО-НЕ";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли не хоча б один з входів 1.";
+            imageblock.src = "images/nor_ANSI.svg";
             break;
         default:
             textblock.innerText = "Помилка";
@@ -85,18 +91,18 @@ function showCombSircuit(elementName) {
 }
 
 //функція для зміни фону сторінки
-function getRandomColor() {
-    let randomNum = Math.floor(Math.random() * 16777215);
-    let HexString = randomNum.toString(16);
-    return "#" + HexString.padStart(6, '0');
-}
+// function getRandomColor() {
+//     let randomNum = Math.floor(Math.random() * 16777215);
+//     let HexString = randomNum.toString(16);
+//     return "#" + HexString.padStart(6, '0');
+// }
 
-function changeBackgroundColor() {
-    let color1 = getRandomColor();
-    let color2 = getRandomColor();
-    let color3 = getRandomColor();
-let newBackground = `radial-gradient(circle at 100% 100%, ${color1}26 20%, ${color2}0D 40%, ${color3}26 80%, #000000 100%)`;
-    document.body.style.backgroundImage = newBackground;
-}
+// function changeBackgroundColor() {
+//     let color1 = getRandomColor();
+//     let color2 = getRandomColor();
+//     let color3 = getRandomColor();
+// let newBackground = `radial-gradient(circle at 100% 100%, ${color1}26 20%, ${color2}0D 40%, ${color3}26 80%, #000000 100%)`;
+//     document.body.style.backgroundImage = newBackground;
+// }
 
-changeBackgroundColor();
+// changeBackgroundColor();
