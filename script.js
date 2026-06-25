@@ -3,11 +3,13 @@ function showElement(elementName) {
     let descblock = document.getElementById("element-desc");
     let imageblock = document.getElementById("element-image");
 
+
     switch(elementName) {
         case 'NOT':
             textblock.textContent = "НЕ";
             descblock.textContent = "Логічний елемент, який інвертує вхідний сигнал.";
             imageblock.src = "images/not_ANSI.svg";
+            
             break;
         case 'AND':
             textblock.textContent = "І";
@@ -35,6 +37,7 @@ function showElement(elementName) {
     }
 
     document.getElementById("workspace").style.display = "block";
+    document.getElementById("standard-toggle-container").style.display = "block";
 }
 
 function showAutomata(elementName) {

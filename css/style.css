@@ -30,4 +30,26 @@ body {
         transform: scale(1.05);
         cursor: pointer;
     }
+
+    button, .settings_buttons {
+        text-decoration: none;
+        display: inline-block;
+        background-color: rgba(111, 104, 104, 0.5);
+        color: white;
+        padding: 10px 20px;
+        /* border-radius: 25px; */
+        border: none;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 16px;
+        margin: 10px;
+        transition: all 0.3s ease;
+    }
+    .settings_buttons:hover {
+        background-color: rgba(109, 107, 107, 0.8);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+
+    
 }

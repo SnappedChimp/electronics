@@ -8,11 +8,18 @@
 </head>
 <body>
     <h1>Логічні елементи</h1>
-    <button class="main_buttons" onclick="showElement('NOT')">НЕ</button>
-    <button class="main_buttons" onclick="showElement('AND')">І</button>
-    <button class="main_buttons" onclick="showElement('OR')">АБО</button>
-    <button class="main_buttons" onclick="showElement('NAND')">І-НЕ</button>
-    <button class="main_buttons" onclick="showElement('NOR')">АБО-НЕ </button>
+   
+    <button class="main_buttons" onclick="showElement('NOT')">NOT</button>
+    <button class="main_buttons" onclick="showElement('AND')">AND</button>
+    <button class="main_buttons" onclick="showElement('OR')">OR</button>
+    <button class="main_buttons" onclick="showElement('NAND')">NAND</button>
+    <button class="main_buttons" onclick="showElement('NOR')">NOR</button>
+
+     <div id="standard-toggle-container" style="display: none; text-align: center; margin-top: 20px;">
+        <button id="standard-toggle" class="settings_buttons" onclick="toggleStandard()">
+            Стандарт: ANSI
+        </button>
+    </div>
 
     <div id="workspace" style="display: none;">
     <h2 id="element-title">Тут буде назва елемента</h2>
