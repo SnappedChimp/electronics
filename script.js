@@ -1,48 +1,47 @@
-function showStandard()
-{
-    let imageblock = document.getElementById("element-image");
- 
-    imageblock.src = imageblock.src.replace("_ANSI", "_GOST");
-
-}
+let currentElement = " ";
 
 function showElement(elementName) {
+
+    currentElement = elementName;
     let textblock = document.getElementById("element-title");
     let descblock = document.getElementById("element-desc");
     let imageblock = document.getElementById("element-image");
 
+    // 1. ОДИН РАЗ перевіряємо стан чекбокса
+    let standardSuffix = "";
+    if (document.getElementById("standard-toggle").checked) {
+        standardSuffix = "_GOST";
+    } else {
+        standardSuffix = "_ANSI";
+    }
 
+
+    // 2. Тепер просто підставляємо цей standardSuffix у назву файлу
     switch(elementName) {
         case 'NOT':
             textblock.textContent = "НЕ";
             descblock.textContent = "Логічний елемент, який інвертує вхідний сигнал.";
-            if (document.getElementById("standard-toggle").checked) {
-                showStandard();
-            } 
-            else 
-            {
-                imageblock.src = "images/NOT_ANSI.svg";
-            }
+            imageblock.src = `images/NOT${standardSuffix}.svg`; 
             break;
         case 'AND':
             textblock.textContent = "І";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли всі входи 1.";
-            imageblock.src = "images/AND_ANSI.svg";
+            imageblock.src = `images/AND${standardSuffix}.svg`;
             break;
         case 'OR':
             textblock.textContent = "АБО";
             descblock.textContent = "Логічний елемент, який дає вихід 1, якщо хоча б один з входів 1.";
-            imageblock.src = "images/OR_ANSI.svg";
+            imageblock.src = `images/OR${standardSuffix}.svg`;
             break;
         case 'NAND':
             textblock.textContent = "І-НЕ";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли не всі входи 1.";
-            imageblock.src = "images/NAND_ANSI.svg";
+            imageblock.src = `images/NAND${standardSuffix}.svg`;
             break;
         case 'NOR':
             textblock.textContent = "АБО-НЕ";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли не хоча б один з входів 1.";
-            imageblock.src = "images/NOR_ANSI.svg";
+            imageblock.src = `images/NOR${standardSuffix}.svg`;
             break;
         default:
             textblock.innerText = "Помилка";
@@ -52,6 +51,24 @@ function showElement(elementName) {
     document.getElementById("workspace").style.display = "block";
     document.getElementById("standard-toggle-container").style.display = "block";
 }
+
+function toggleStandard() {
+    let checkbox = document.getElementById("standard-toggle");
+    
+    let buttonText = document.getElementById("standard-changer_text"); 
+
+    if (checkbox.checked) {
+        buttonText.textContent = "Стандарт: GOST";
+    } else {
+        buttonText.textContent = "Стандарт: ANSI";
+    }
+
+    if (currentElement !== '') {
+        showElement(currentElement);
+    }
+}
+
+ 
 
 function showAutomata(elementName) {
     let automataTitle = document.getElementById("automata-title");
