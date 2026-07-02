@@ -1,3 +1,11 @@
+function showStandard()
+{
+    let imageblock = document.getElementById("element-image");
+ 
+    imageblock.src = imageblock.src.replace("_ANSI", "_GOST");
+
+}
+
 function showElement(elementName) {
     let textblock = document.getElementById("element-title");
     let descblock = document.getElementById("element-desc");
@@ -8,28 +16,33 @@ function showElement(elementName) {
         case 'NOT':
             textblock.textContent = "НЕ";
             descblock.textContent = "Логічний елемент, який інвертує вхідний сигнал.";
-            imageblock.src = "images/not_ANSI.svg";
-            
+            if (document.getElementById("standard-toggle").checked) {
+                showStandard();
+            } 
+            else 
+            {
+                imageblock.src = "images/NOT_ANSI.svg";
+            }
             break;
         case 'AND':
             textblock.textContent = "І";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли всі входи 1.";
-            imageblock.src = "images/and_ANSI.svg";
+            imageblock.src = "images/AND_ANSI.svg";
             break;
         case 'OR':
             textblock.textContent = "АБО";
             descblock.textContent = "Логічний елемент, який дає вихід 1, якщо хоча б один з входів 1.";
-            imageblock.src = "images/or_ANSI.svg";
+            imageblock.src = "images/OR_ANSI.svg";
             break;
         case 'NAND':
             textblock.textContent = "І-НЕ";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли не всі входи 1.";
-            imageblock.src = "images/nand_ANSI.svg";
+            imageblock.src = "images/NAND_ANSI.svg";
             break;
         case 'NOR':
             textblock.textContent = "АБО-НЕ";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли не хоча б один з входів 1.";
-            imageblock.src = "images/nor_ANSI.svg";
+            imageblock.src = "images/NOR_ANSI.svg";
             break;
         default:
             textblock.innerText = "Помилка";
@@ -109,3 +122,38 @@ function showCombSircuit(elementName) {
 // }
 
 // changeBackgroundColor();
+
+
+
+// function showgoststandard() {
+
+//         switch (document.getElementById("element-name").value) 
+//         {
+//         case 'NOT':
+//             document.getElementById("element-image").src = "images/NOT_GOST.svg";
+//             break;
+//         case 'AND':
+//             document.getElementById("element-image").src = "images/AND_GOST.svg";
+//             break;
+//         case 'OR':
+//             document.getElementById("element-image").src = "images/OR_GOST.svg";
+//             break;
+//         case 'NAND':
+//             document.getElementById("element-image").src = "images/NAND_GOST.svg";
+//             break;
+//         case 'NOR':
+//             document.getElementById("element-image").src = "images/NOR_GOST.svg";
+//             break;
+//         default:
+//             document.getElementById("element-image").src = "";  
+//     }
+// } 
+
+
+// function toggleStandard() {
+//     if (document.getElementById("standard-toggle").checked) {
+//         showgoststandard();
+//     } else {
+//         document.getElementById("element-image").src = "images/NOT_GOST.svg";
+//     }   
+// }

@@ -16,9 +16,9 @@
     <button class="main_buttons" onclick="showElement('NOR')">NOR</button>
 
      <div id="standard-toggle-container" style="display: none; text-align: center; margin-top: 20px;">
-        <button id="standard-toggle" class="settings_buttons" onclick="toggleStandard()">
-            Стандарт: ANSI
-        </button>
+        <label class = "toggle-button">
+            <input type="checkbox" id="standard-toggle" onchange="showStandard()">
+            <span class="standard-changer">Стандарт: ANSI</span>
     </div>
 
     <div id="workspace" style="display: none;">
