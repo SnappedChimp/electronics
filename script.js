@@ -20,7 +20,7 @@ function showElement(elementName) {
     switch(elementName) {
         case 'NOT':
             textblock.textContent = "НЕ";
-            descblock.textContent = "Логічний елемент, який інвертує вхідний сигнал.";
+            descblock.textContent = "Найпростіша функція, яка має один вхід і вихід, просто інвертує вхідний сигнал.";
             imageblock.src = `images/NOT${standardSuffix}.svg`; 
             break;
         case 'AND':
@@ -67,6 +67,8 @@ function toggleStandard() {
         showElement(currentElement);
     }
 }
+
+
 
  
 
