@@ -6,7 +6,12 @@ function showElement(elementName) {
     let textblock = document.getElementById("element-title");
     let descblock = document.getElementById("element-desc");
     let imageblock = document.getElementById("element-image");
+    let circuitblock = document.getElementById("circuit-image");
 
+    circuitblock.style.display = "none"; // Схема за замовчуванням прихована
+    circuitblock.src = ""; // Очищуємо src, щоб уникнути відображення попередньої схеми
+
+    
     // 1. ОДИН РАЗ перевіряємо стан чекбокса
     let standardSuffix = "";
     if (document.getElementById("standard-toggle").checked) {
@@ -27,6 +32,8 @@ function showElement(elementName) {
             textblock.textContent = "І";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли всі входи 1.";
             imageblock.src = `images/AND${standardSuffix}.svg`;
+            circuitblock.src = `images/AND_gate_RTL.svg`;
+            circuitblock.style.display = "block"; // Показуємо схему
             break;
         case 'OR':
             textblock.textContent = "АБО";
@@ -67,7 +74,6 @@ function toggleStandard() {
         showElement(currentElement);
     }
 }
-
 
 
  
