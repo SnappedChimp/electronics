@@ -33,12 +33,14 @@ function showElement(elementName) {
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли всі входи 1.";
             imageblock.src = `images/AND${standardSuffix}.svg`;
             circuitblock.src = `images/AND_gate_RTL.svg`;
-            circuitblock.style.display = "block"; // Показуємо схему
+            circuitblock.style.display = "block"; 
             break;
         case 'OR':
             textblock.textContent = "АБО";
             descblock.textContent = "Логічний елемент, який дає вихід 1, якщо хоча б один з входів 1.";
             imageblock.src = `images/OR${standardSuffix}.svg`;
+            circuitblock.src = `images/OR_gate_RTL.svg`;
+            circuitblock.style.display = "block"; 
             break;
         case 'NAND':
             textblock.textContent = "І-НЕ";
