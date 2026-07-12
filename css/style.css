@@ -2,7 +2,18 @@ body {
     font-family: 'American Typewriter', monospace;
     color: white;
     /* background-color: #000000; */
-    background: radial-gradient(circle at 90% 20%, #011325 30%, #071c33 40%, #000000 80%); */
+    background: 
+        /* 1-й шар (найвищий): Інтенсивне яскраве коло в ПРАВОМУ ВЕРХНЬОМУ куті */
+        radial-gradient(circle at 95% 5%, #22558b 0%, transparent 50%),
+        
+        /* 2-й шар: Глибоке темно-синє коло, наприклад, ЗЛІВА ЗНИЗУ (для об'єму) */
+        radial-gradient(circle at 10% 85%, #011325 0%, transparent 60%),
+        
+        /* 3-й шар (найнижчий): Базовий чорний фон, на якому все це лежить */
+        #000000;
+        
+    /* Щоб фон не "стрибав", якщо сторінка коротка */
+    background-attachment: fixed;*/
     background: #000000; /* fallback for old browsers */
     background-repeat: no-repeat;
     background-attachment: fixed;

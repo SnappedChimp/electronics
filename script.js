@@ -27,6 +27,8 @@ function showElement(elementName) {
             textblock.textContent = "НЕ";
             descblock.textContent = "Найпростіша функція, яка має один вхід і вихід, просто інвертує вхідний сигнал.";
             imageblock.src = `images/NOT${standardSuffix}.svg`; 
+            circuitblock.src = `images/NOT_gate_RTL.svg`;
+            circuitblock.style.display = "block";
             break;
         case 'AND':
             textblock.textContent = "І";
