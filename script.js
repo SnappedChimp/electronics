@@ -48,6 +48,8 @@ function showElement(elementName) {
             textblock.textContent = "І-НЕ";
             descblock.textContent = "Логічний елемент, який дає вихід 1 лише тоді, коли не всі входи 1.";
             imageblock.src = `images/NAND${standardSuffix}.svg`;
+            circuitblock.src = `images/NAND_gate_RTL.svg`;
+            circuitblock.style.display = "block";
             break;
         case 'NOR':
             textblock.textContent = "АБО-НЕ";
